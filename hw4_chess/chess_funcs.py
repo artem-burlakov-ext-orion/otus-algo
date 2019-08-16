@@ -106,6 +106,7 @@ def move_count(data):
 
 #3694.1.Счетчик полуходов
 def half_move_count(data1, data2):
+    data1 = move_count(data1)
     params = get_params(data1)
     if not_capture_or_not_pawn_move(data1, data2):
         params[3] = str(int(params[3]) + 1)
